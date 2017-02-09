@@ -54,7 +54,25 @@
         expect(answer).toEqual([NaN, NaN]);
       });      
 
-    });    
+    }); 
+
+    describe('Return ["Not an array"] in a new list when supplied without an array', function () {
+
+      it('should return ["Not an array"] for 1', function () {
+        var answer = maxmin_fun.findMinMax(1);
+        expect(answer).toEqual(["Not an array"]);
+      });   
+
+    }); 
+    
+     describe('Return [Infinity,-Infinity] in a new list when supplied with empty array', function () {
+
+      it('should return [Infinity,-Infinity] for []', function () {
+        var answer = maxmin_fun.findMinMax([]);
+        expect(answer).toEqual([Infinity,-Infinity]);
+      });   
+
+    });          
 
   });
 
