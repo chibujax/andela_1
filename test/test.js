@@ -117,6 +117,16 @@
         expect(answer).toBe(101);
       });
 
+      it("should return 'a' since its NaN", function() {
+        var answer = fizbuz.fizzBuzz('a');
+        expect(answer).toBe('a');
+      });
+
+      it("should return -1 since its indivisible by 3 and 5", function() {
+        var answer = fizbuz.fizzBuzz(-1);
+        expect(answer).toBe(-1);
+      });      
+
     });         
 
   });
