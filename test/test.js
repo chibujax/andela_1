@@ -42,6 +42,20 @@
 
     });
 
+    describe('Return [NaN, NaN] in a new list when none number is in that list', function () {
+
+      it('should return [NaN, NaN] for [4, 5, "ben", 4]', function () {
+        var answer = maxmin_fun.findMinMax([4, 5, "ben", 4]);
+        expect(answer).toEqual([NaN, NaN]);
+      });
+
+      it('should return [NaN, NaN] for ["sun"]', function () {
+        var answer = maxmin_fun.findMinMax(["sun"]);
+        expect(answer).toEqual([NaN, NaN]);
+      });      
+
+    });    
+
   });
 
 })();
