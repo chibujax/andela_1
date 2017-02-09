@@ -21,6 +21,11 @@
         expect(answer).toEqual([2, 78]);
       });
 
+      it('should return [2, 7] for [2, 3, 3, 3, 7, 7, 5, 4, 4]', function () {
+        var answer = maxmin_fun.findMinMax([2, 3, 3, 3, 7, 7, 5, 4, 4]);
+        expect(answer).toEqual([2, 7]);
+      });      
+
     });
 
     describe('Return the number in the list in a new list follows `[min]` when the number is the min and max number in that list', function () {
@@ -29,6 +34,11 @@
         var answer = maxmin_fun.findMinMax([4, 4, 4, 4]);
         expect(answer).toEqual([4]);
       });
+
+      it('should return [1] for [1]', function () {
+        var answer = maxmin_fun.findMinMax([1]);
+        expect(answer).toEqual([1]);
+      });      
 
     });
 
