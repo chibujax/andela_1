@@ -27,7 +27,7 @@
 
       it('should return [4] for [4, 4, 4, 4]', function () {
         var answer = maxmin_fun.findMinMax([4, 4, 4, 4]);
-        expect(answer).toEqual([4, 4]);
+        expect(answer).toEqual([4]);
       });
 
     });
