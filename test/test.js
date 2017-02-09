@@ -1,6 +1,7 @@
 (function() {
   'use strict';
   var maxmin_fun = require("../app/min_max/minmax.js");
+  var fizbuz = require("../app/fizz_buzz/fizzbuzz.js");
 
   describe('Min-Max Numbers in a List: ', function () {
 
@@ -72,7 +73,51 @@
         expect(answer).toEqual([Infinity,-Infinity]);
       });   
 
-    });          
+    }); 
+    
+    describe("Fizz Buzz tests ", function() {
+
+      it("should return `Fizz` for number divisible by 3", function() {
+        var answer = fizbuz.fizzBuzz(3);
+        expect(answer).toBe('Fizz');
+      });
+
+      it("should return `Buzz` for number divisible by 5", function() {
+        var answer = fizbuz.fizzBuzz(5);
+        expect(answer).toBe('Buzz');
+      });
+
+      it("should return `FizzBuzz` for 15", function() {
+        var answer = fizbuz.fizzBuzz(15);
+        expect(answer).toBe('FizzBuzz');
+      });
+
+      it("should return `FizzBuzz` for 45", function() {
+        var answer = fizbuz.fizzBuzz(45);
+        expect(answer).toBe('FizzBuzz');
+      });
+
+      it("should return `FizzBuzz` for 90", function() {
+        var answer = fizbuz.fizzBuzz(90);
+        expect(answer).toBe('FizzBuzz');
+      });
+
+      it("should return `Fizz` for 63", function() {
+        var answer = fizbuz.fizzBuzz(63);
+        expect(answer).toBe('Fizz');
+      });
+
+      it("should return 7 since its indivisible by 3 and 5", function() {
+        var answer = fizbuz.fizzBuzz(7);
+        expect(answer).toBe(7);
+      });
+
+      it("should return 101 since its indivisible by 3 and 5", function() {
+        var answer = fizbuz.fizzBuzz(101);
+        expect(answer).toBe(101);
+      });
+
+    });         
 
   });
 
