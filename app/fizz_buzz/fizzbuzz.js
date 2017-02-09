@@ -5,8 +5,8 @@ exports.fizzBuzz = function(num) {
 	  if (num % 5 === 0) retValue += 'Buzz';
 	  if (retValue === '') retValue = num
 	}
-else {
+	else {
 	retValue = num;
-}
+	}
 	return retValue;
 };
